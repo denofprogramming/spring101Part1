@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+		<bean id="messagePrinter" class="com.denofprogramming.service.MessagePrinter">
+
+		<property name="service" ref="messageService"></property>
+
+	</bean>
+
+
+	<bean id="messageService" class="com.denofprogramming.service.BasicMessageOfTheDayImpl"> 
+		<property name="message" value="Hello world!!!"></property> </bean>
+
+	<!-- <bean id="messageService" class="com.denofprogramming.service.DynamicMessageOfTheDayImpl">
+		<property name="messages">
+			<array>			
+				<value>"Sunday morning message!"</value>
+				<value>"Monday morning message!"</value>
+				<value>"Tuesday morning message!"</value>
+				<value>"Wednesday morning message!"</value>
+				<value>"Thursday morning message!"</value>
+				<value>"Friday morning message!"</value>
+				<value>"Saturday morning message!"</value>				
+			</array>
+		</property> 
+
+	</bean>-->
+</beans>
